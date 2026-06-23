@@ -7,16 +7,28 @@ df_sorted = df.sort_values(by='HoursPlayed',ascending=False).reset_index(drop=Tr
 print(df_sorted)
 
 # Plotting graph test
+def GVH(): # GVH mean games vs hours graph
+    fig,ax1 = mat.subplots(figsize =(15,6))
 
-fig,ax1 = mat.subplots(figsize =(15,6))
 
+    ax1.plot(df['Name'],df['HoursPlayed'],color='red',marker='o',linewidth=2.5)
+    ax1.set_xlabel('Game Name',fontsize=12)
+    ax1.set_ylabel('HoursPlayed',fontsize=12)
+    ax1.tick_params(axis='x',color='blue')
+    ax1.grid(True,linestyle=':',alpha=0.5)
+    
 
-ax1.plot(df['Name'],df['HoursPlayed'],color='red',marker='o',linewidth=2.5)
-ax1.set_xlabel('Game Name',fontsize=12)
-ax1.set_ylabel('HoursPlayed',fontsize=12)
-ax1.tick_params(axis='x',color='blue')
-ax1.grid(True,linestyle=':',alpha=0.5)
+    mat.title('Line Graph')
+    mat.show()
 
-mat.title('Test Graph')
-mat.show()
+def BarGVH():
+    fig,ax1 = mat.subplots(figsize =(15,6))
 
+    ax1.bar(df['Name'],df['HoursPlayed'],width=0.8,bottom=None,align='center',)
+    ax1.tick_params(axis='x',labelrotation=90)
+    mat.subplots_adjust(bottom=0.3)
+
+    mat.title('Bar Graph')
+    mat.show()
+
+BarGVH()
