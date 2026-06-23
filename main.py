@@ -6,6 +6,8 @@ df = pd.read_csv('Data.csv')
 df_sorted = df.sort_values(by='HoursPlayed',ascending=False).reset_index(drop=True) 
 print(df_sorted)
 
+print('--------------------------------------------------------')
+
 # Plotting graph test
 def GVH(): # GVH mean games vs hours graph
     fig,ax1 = mat.subplots(figsize =(15,6))
@@ -24,11 +26,18 @@ def GVH(): # GVH mean games vs hours graph
 def BarGVH():
     fig,ax1 = mat.subplots(figsize =(15,6))
 
-    ax1.bar(df['Name'],df['HoursPlayed'],width=0.8,bottom=None,align='center',)
+    ax1.bar(df['Name'],df['HoursPlayed'],width=0.8,bottom=None,align='center',color='purple')
     ax1.tick_params(axis='x',labelrotation=90)
     mat.subplots_adjust(bottom=0.3)
 
     mat.title('Bar Graph')
     mat.show()
 
-BarGVH()
+choice = int(input('What would u like to see ?\n 1.LineGraph(press_1)\n 2.BarGraph(press_2)\n'))
+
+if choice == 1:
+    GVH()
+elif choice == 2:
+    BarGVH()
+else:
+    print('what broo')
