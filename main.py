@@ -9,7 +9,7 @@ print(df_sorted)
 print('--------------------------------------------------------')
 
 # Plotting graph test
-def GVH(): # GVH mean games vs hours graph
+def games_vs_hours_line(): # GVH mean games vs hours graph
     fig,ax1 = mat.subplots(figsize =(15,6))
 
 
@@ -23,7 +23,7 @@ def GVH(): # GVH mean games vs hours graph
     mat.title('Line Graph')
     mat.show()
 
-def BarGVH():
+def games_vs_hours_bar():
     fig,ax1 = mat.subplots(figsize =(15,6))
 
     ax1.bar(df['Name'],df['HoursPlayed'],width=0.8,bottom=None,align='center',color='purple')
@@ -36,8 +36,8 @@ def BarGVH():
 choice = int(input('What would u like to see ?\n 1.LineGraph(press_1)\n 2.BarGraph(press_2)\n'))
 
 if choice == 1:
-    GVH()
+    games_vs_hours_line()
 elif choice == 2:
-    BarGVH()
+    games_vs_hours_bar()
 else:
     print('what broo')
