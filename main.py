@@ -44,9 +44,6 @@ def pie(): #Genre Distribution
     mat.title('Pie Chart')
     mat.show()
 
-print('--------------------------------------------------------')
-print('------------------------MENU----------------------------')
-print('-------------------------------------------------kinda--')
 
 choice = int(input('What would u like to see ?\n 1.LineGraph(press_1)\n 2.BarGraph(press_2)\n 3.PieChart(press_3)\n'))
 
