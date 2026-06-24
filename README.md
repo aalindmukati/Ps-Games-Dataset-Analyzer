@@ -85,9 +85,8 @@ PS5-Game-Analytics/
 - [ ] Automatically save new games to CSV
 - [ ] Average Rating by Genre
 - [ ] Average Hours by Genre
-- [ ] Completion Status Analysis
-- [ ] Search for a specific game
-- [ ] Better UI with colored terminal output
+- [ ] *maybe* Search for a specific game
+- [ ] *maybe* Better UI with colored terminal output
 
 ---
 

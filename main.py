@@ -25,7 +25,7 @@ def games_vs_hours_line(): # GVH mean games vs hours graph
     mat.title('Line Graph')
     mat.show()
 
-def games_vs_hours_bar():
+def games_vs_hours_bar(): #games played vs hours they are played
     fig,ax1 = mat.subplots(figsize =(15,6))
 
     ax1.bar(df['Name'],df['HoursPlayed'],width=0.8,bottom=None,align='center',color='purple')
@@ -35,7 +35,7 @@ def games_vs_hours_bar():
     mat.title('Bar Graph')
     mat.show()
 
-def pie():
+def pie(): #Genre Distribution
     fig,ax1 = mat.subplots(figsize=(15,6))
     tt = df['Genre'].value_counts()
     
