@@ -44,15 +44,15 @@ def pie():
     mat.title('Pie Chart')
     mat.show()
 
-pie()
 
-# choice = int(input('What would u like to see ?\n 1.LineGraph(press_1)\n 2.BarGraph(press_2)\n 3.PieChart(press_3)\n'))
 
-# if choice == 1:
-#     games_vs_hours_line()
-# elif choice == 2:
-#     games_vs_hours_bar()
-# elif choice == 3:
-#     pie()
-# else:
-#     print('what broo')
+choice = int(input('What would u like to see ?\n 1.LineGraph(press_1)\n 2.BarGraph(press_2)\n 3.PieChart(press_3)\n'))
+
+if choice == 1:
+    games_vs_hours_line()
+elif choice == 2:
+    games_vs_hours_bar()
+elif choice == 3:
+    pie()
+else:
+    print('what broo')
