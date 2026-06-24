@@ -7,8 +7,6 @@ df = pd.read_csv('Data.csv')
 df_sorted = df.sort_values(by='HoursPlayed',ascending=False).reset_index(drop=True) 
 print(df_sorted)
 
-tt = df['Genre'].value_counts()
-print(tt.values)
 
 print('--------------------------------------------------------')
 
@@ -39,17 +37,22 @@ def games_vs_hours_bar():
 
 def pie():
     fig,ax1 = mat.subplots(figsize=(15,6))
+    tt = df['Genre'].value_counts()
+    
+    ax1.pie(tt.values, labels=tt.index.to_list())
 
-    # ax1.pie(sizes=12,tt)
+    mat.title('Pie Chart')
+    mat.show()
 
+pie()
 
-choice = int(input('What would u like to see ?\n 1.LineGraph(press_1)\n 2.BarGraph(press_2)\n 3.PieChart(press_3)\n'))
+# choice = int(input('What would u like to see ?\n 1.LineGraph(press_1)\n 2.BarGraph(press_2)\n 3.PieChart(press_3)\n'))
 
-if choice == 1:
-    games_vs_hours_line()
-elif choice == 2:
-    games_vs_hours_bar()
-elif choice == 3:
-    pie()
-else:
-    print('what broo')
+# if choice == 1:
+#     games_vs_hours_line()
+# elif choice == 2:
+#     games_vs_hours_bar()
+# elif choice == 3:
+#     pie()
+# else:
+#     print('what broo')
