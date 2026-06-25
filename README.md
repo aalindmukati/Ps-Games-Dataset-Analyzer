@@ -77,7 +77,6 @@ PS5-Game-Analytics/
 
 ## 🔮 Planned Features
 
-- [ ] Rating Distribution Histogram
 - [ ] Rating vs Hours Scatter Plot
 - [ ] Top Rated Games Graph
 - [ ] Statistics Dashboard
