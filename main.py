@@ -46,10 +46,10 @@ def pie(): #Genre Distribution
     mat.show()
 
 def Input_Games():
-    Name = input('Enter the Game name').title()
-    Genre = input('Enter the Genre').title()
-    HoursPlayed = int(input('Enter the Hours played or playing'))
-    PersonalRating = int(input('How much would u rate it out of 10'))
+    Name = input('Enter the Game name ').title()
+    Genre = input('Enter the Genre ').title()
+    HoursPlayed = int(input('Enter the Hours played or playing '))
+    PersonalRating = int(input('How much would u rate it out of 10 '))
 
     new_game = {
         "Name": Name,
@@ -58,10 +58,10 @@ def Input_Games():
         "PersonalRating": PersonalRating
     }
 
-    new_game_df = pd.DataFrame([new_game])
-    df = pd.concat([df, new_game_df], ignore_index=True)
+    new_game_df = pd.DataFrame([new_game]) #conv3rting dictionary to data frame
+    df = pd.concat([df, new_game_df], ignore_index=True) #concat() simply stacks the dictionary data to pre existing df, ignore_index=True creates fresh numbering.
 
-    df.to_csv("Data.csv", index=False)
+    df.to_csv("Data.csv", index=False) #This saves your updated dataframe back into the CSV.
 
     print("\nGame Added Successfully!")
 
@@ -74,5 +74,7 @@ elif choice == 2:
     games_vs_hours_bar()
 elif choice == 3:
     pie()
+elif choice == 4:
+    Input_Games()
 else:
     print('what broo')
