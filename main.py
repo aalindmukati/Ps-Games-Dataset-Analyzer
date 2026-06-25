@@ -1,4 +1,5 @@
 import pandas as pd
+import csv
 import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as mat
@@ -44,8 +45,14 @@ def pie(): #Genre Distribution
     mat.title('Pie Chart')
     mat.show()
 
+def Input_Games():
+    Name = input('Enter the Game name')
+    Genre = input('Enter the Genre')
+    HoursPlayed = input('Enter the Hours played or playing')
+    PersonalRating = input('How much would u rate it out of 10')
 
-choice = int(input('What would u like to see ?\n 1.LineGraph(press_1)\n 2.BarGraph(press_2)\n 3.PieChart(press_3)\n'))
+
+choice = int(input('What would u like to see ?\n 1.Games vs Hours Played[line](press_1)\n 2.Games vs Hours Played[bar](press_2)\n 3.Genre(press_3)\n 4.Input Games(press_4) \n Choice = '))
 
 if choice == 1:
     games_vs_hours_line()
