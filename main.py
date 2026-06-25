@@ -46,10 +46,24 @@ def pie(): #Genre Distribution
     mat.show()
 
 def Input_Games():
-    Name = input('Enter the Game name')
-    Genre = input('Enter the Genre')
-    HoursPlayed = input('Enter the Hours played or playing')
-    PersonalRating = input('How much would u rate it out of 10')
+    Name = input('Enter the Game name').title()
+    Genre = input('Enter the Genre').title()
+    HoursPlayed = int(input('Enter the Hours played or playing'))
+    PersonalRating = int(input('How much would u rate it out of 10'))
+
+    new_game = {
+        "Name": Name,
+        "Genre": Genre,
+        "HoursPlayed": HoursPlayed,
+        "PersonalRating": PersonalRating
+    }
+
+    new_game_df = pd.DataFrame([new_game])
+    df = pd.concat([df, new_game_df], ignore_index=True)
+
+    df.to_csv("Data.csv", index=False)
+
+    print("\nGame Added Successfully!")
 
 
 choice = int(input('What would u like to see ?\n 1.Games vs Hours Played[line](press_1)\n 2.Games vs Hours Played[bar](press_2)\n 3.Genre(press_3)\n 4.Input Games(press_4) \n Choice = '))
