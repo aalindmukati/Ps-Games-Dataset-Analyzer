@@ -46,6 +46,8 @@ def pie(): #Genre Distribution
     mat.show()
 
 def Input_Games():
+    global df 
+    
     Name = input('Enter the Game name ').title()
     Genre = input('Enter the Genre ').title()
     HoursPlayed = int(input('Enter the Hours played or playing '))
