@@ -19,11 +19,11 @@ def games_vs_hours_line(): # GVH mean games vs hours graph
     ax1.plot(df['Name'],df['HoursPlayed'],color='red',marker='o',linewidth=2.5)
     ax1.set_xlabel('Game Name',fontsize=12)
     ax1.set_ylabel('HoursPlayed',fontsize=12)
-    ax1.tick_params(axis='x',color='blue')
+    ax1.tick_params(axis='x',color='blue',labelrotation=90)
     ax1.grid(True,linestyle=':',alpha=0.5)
     
 
-    mat.title('Line Graph')
+    mat.title('Hours per game')
     mat.show()
 
 def games_vs_hours_bar(): #games played vs hours they are played
@@ -33,7 +33,7 @@ def games_vs_hours_bar(): #games played vs hours they are played
     ax1.tick_params(axis='x',labelrotation=90)
     mat.subplots_adjust(bottom=0.3)
 
-    mat.title('Bar Graph')
+    mat.title('Hours per game')
     mat.show()
 
 def pie(): #Genre Distribution
