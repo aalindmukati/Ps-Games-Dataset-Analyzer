@@ -51,7 +51,7 @@ def Input_Games():
     Name = input('Enter the Game name ').title()
     Genre = input('Enter the Genre ').title()
     HoursPlayed = int(input('Enter the Hours played or playing '))
-    PersonalRating = int(input('How much would u rate it out of 10 '))
+    PersonalRating = float(input('How much would u rate it out of 10 '))
 
     new_game = {
         "Name": Name,
