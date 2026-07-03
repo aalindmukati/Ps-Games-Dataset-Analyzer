@@ -47,7 +47,13 @@ def pie(): #Genre Distribution
 
 def Sctr(): #Scatter graph
     fig,ax1 = mat.subplots(figsize=(15,6))
-    sns.scatterplot(x='Genre',y='PersonalRating',data=df,palette='rocket')
+    for index, row in df.iterrows():
+        ax1.text(
+        row["Genre"],
+        row["PersonalRating"],
+        row["Name"]
+    )
+    sns.scatterplot(x='Genre',y='PersonalRating',data=df,palette='hot')
 
     mat.title('Genre vs Rating')
     mat.show()
