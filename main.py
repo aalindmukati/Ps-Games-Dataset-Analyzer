@@ -45,6 +45,15 @@ def pie(): #Genre Distribution
     mat.title('Pie Chart')
     mat.show()
 
+def Sctr(): #Scatter graph
+    fig,ax1 = mat.subplots(figsize=(15,6))
+    sns.scatterplot(x='Genre',y='PersonalRating',data=df,palette='rocket')
+
+    mat.title('Genre vs Rating')
+    mat.show()
+
+    
+
 def Input_Games():
     global df 
     
@@ -68,7 +77,17 @@ def Input_Games():
     print("\nGame Added Successfully!")
 
 
-choice = int(input('What would u like to see ?\n 1.Games vs Hours Played[line](press_1)\n 2.Games vs Hours Played[bar](press_2)\n 3.Genre(press_3)\n 4.Input Games(press_4) \n Choice = '))
+choice = int(input(
+'''What would u like to see?
+
+1. Games vs Hours Played [Line]
+2. Games vs Hours Played [Bar]
+3. Genre Distribution [Pie]
+4. Genre vs Rating [Scatter]
+5. Add New Game
+
+Choice = '''
+))
 
 if choice == 1:
     games_vs_hours_line()
@@ -77,6 +96,8 @@ elif choice == 2:
 elif choice == 3:
     pie()
 elif choice == 4:
+    Sctr()
+elif choice == 5:
     Input_Games()
 else:
     print('what broo')
