@@ -37,7 +37,7 @@ def games_vs_hours_bar(): #games played vs hours they are played
     mat.show()
 
 def pie(): #Genre Distribution
-    fig,ax1 = mat.subplots(figsize=(15,6))
+    fig,ax1 = mat.subplots(figsize=(15,7))
     tt = df['Genre'].value_counts()
     
     ax1.pie(tt.values, labels=tt.index.to_list())
@@ -58,7 +58,15 @@ def Sctr(): #Scatter graph
     mat.title('Genre vs Rating')
     mat.show()
 
-    
+def Pair():
+    sns.pairplot(df,hue='Genre',diag_kind='kde')
+    mat.suptitle('PLOS')
+    mat.show()
+
+def Count():
+    sns.countplot(x='Genre',data=df,hue='HoursPlayed',palette='pastel')
+    mat.show()
+
 
 def Input_Games():
     global df 
@@ -90,7 +98,9 @@ choice = int(input(
 2. Games vs Hours Played [Bar]
 3. Genre Distribution [Pie]
 4. Genre vs Rating [Scatter]
-5. Add New Game
+5. Pair-Plot
+6. Count-Plot
+7. Add New Game
 
 Choice = '''
 ))
@@ -104,6 +114,10 @@ elif choice == 3:
 elif choice == 4:
     Sctr()
 elif choice == 5:
+    Pair()
+elif choice == 6:
+    Count()
+elif choice == 7:
     Input_Games()
 else:
     print('what broo')
