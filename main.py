@@ -62,11 +62,7 @@ def Pair():
     sns.pairplot(df,hue='Genre',diag_kind='kde')
     mat.suptitle('PLOS')
     mat.show()
-
-def Count():
-    sns.countplot(x='Genre',data=df,hue='HoursPlayed',palette='pastel')
-    mat.show()
-
+    
 
 def Input_Games():
     global df 
@@ -98,8 +94,8 @@ choice = int(input(
 2. Games vs Hours Played [Bar]
 3. Genre Distribution [Pie]
 4. Genre vs Rating [Scatter]
-5. Pair-Plot
-6. Count-Plot
+5. Pair-plot
+6.
 7. Add New Game
 
 Choice = '''
@@ -116,8 +112,6 @@ elif choice == 4:
 elif choice == 5:
     Pair()
 elif choice == 6:
-    Count()
-elif choice == 7:
     Input_Games()
 else:
     print('what broo')
