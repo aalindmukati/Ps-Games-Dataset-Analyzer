@@ -95,8 +95,7 @@ choice = int(input(
 3. Genre Distribution [Pie]
 4. Genre vs Rating [Scatter]
 5. Pair-plot
-6.
-7. Add New Game
+6. Add New Game
 
 Choice = '''
 ))
