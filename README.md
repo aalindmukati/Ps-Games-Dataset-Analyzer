@@ -38,19 +38,6 @@ Black Myth Wukong,RPG,37,8.8
 
 ---
 
-## 📷 Current Graphs
-
-### 📈 Line Graph
-Shows hours played for every game.
-
-### 📊 Bar Graph
-Compares the hours played across all games.
-
-### 🥧 Genre Distribution
-Displays the percentage of games belonging to each genre.
-
----
-
 ## 🚀 Technologies Used
 
 - Python 3
