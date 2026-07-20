@@ -9,17 +9,17 @@ df_sorted = df.sort_values(by='HoursPlayed',ascending=False).reset_index(drop=Tr
 print(df_sorted)
 
 
-print('--------------------------------------------------------')
+print('-'*75)
 
 # Plotting graph test
 def games_vs_hours_line(): # GVH mean games vs hours graph
     fig,ax1 = mat.subplots(figsize =(15,6))
 
 
-    ax1.plot(df['Name'],df['HoursPlayed'],color='red',marker='o',linewidth=2.5)
+    ax1.plot(df['Name'],df['HoursPlayed'],color='cadetblue',marker='o',linewidth=2.5)
     ax1.set_xlabel('Game Name',fontsize=12)
     ax1.set_ylabel('HoursPlayed',fontsize=12)
-    ax1.tick_params(axis='x',color='blue',labelrotation=90)
+    ax1.tick_params(axis='x',color='cadetblue',labelrotation=90)
     ax1.grid(True,linestyle=':',alpha=0.5)
     
 
@@ -27,9 +27,9 @@ def games_vs_hours_line(): # GVH mean games vs hours graph
     mat.show()
 
 def games_vs_hours_bar(): #games played vs hours they are played
-    fig,ax1 = mat.subplots(figsize =(15,6))
+    fig,ax1 = mat.subplots(figsize =(15,7))
 
-    ax1.bar(df['Name'],df['HoursPlayed'],width=0.8,bottom=None,align='center',color='purple')
+    ax1.bar(df['Name'],df['HoursPlayed'],width=0.8,bottom=None,align='center',color='navy')
     ax1.tick_params(axis='x',labelrotation=90)
     mat.subplots_adjust(bottom=0.3)
 
